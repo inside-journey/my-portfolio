@@ -1,0 +1,165 @@
+/* Grid container for the skills list */
+.skills-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive card size */
+    grid-gap: 70px; /* Increased gap for better spacing */
+    padding-right: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Skills item card */
+.skills-item {
+    position: relative;
+    background-color: #c5c5c5;
+    margin: 20px; /* Increased margin to give more space between items */
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    perspective: 1000px; /* 3D perspective for flip */
+    width: 100%;
+    height: 300px; /* Set a consistent height for cards */
+    transition: transform 0.6s ease;
+    padding: 20px;
+}
+
+/* Inner container for the flipping effect */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Front and back of the flip card */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1em; /* Set a slightly smaller font size to prevent overflow */
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #fafafa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Add a background image for the front of the card */
+.card-front {
+    background-image: url("/assets/images/skillback-pic.jpg"); /* Path to the image for the front */
+    background-size: cover;
+    background-position: center; /* Ensure the image covers the front card */
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: multiply;
+}
+
+
+/* Add a background image for the back of the card */
+.card-back {
+    background-image: url("/assets/images/skillback-pic-copy.jpg"); /* Path to the image for the back */
+    background-size: cover; /* Ensure the image covers the back card */
+    background-position: center;
+    transform: rotateY(180deg); /* Ensure the back is hidden initially */
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 1);
+    background-blend-mode: multiply;
+}
+
+/* Ensure the images fit properly inside the card */
+.card-back img, .card-front img {
+    max-width: 150%;  /* Make sure the image doesn't exceed the container's width */
+    max-height: 150%; /* Ensure the image doesn't exceed the container's height */
+    object-fit: cover; /* Scale the image to cover the area while maintaining aspect ratio */
+    border-radius: 20px; /* Optional: match the card's border radius */
+    transition: transform 0.6s ease; /* Smooth transition for hover effect */
+}
+
+/* Pop-out effect when flipping */
+.skills-item.flipped .card-back img,
+.skills-item.flipped .card-front img {
+    transform: scale(0.75); /* Slightly increase the size to create a pop-out effect */
+}
+
+/* Back face styling */
+.card-back {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+/* Flip the card on click */
+.skills-item.flipped .card-inner {
+    transform: rotateX(180deg);
+}
+
+/* Ensure text wrapping in the front card */
+.skills-item .card-front {
+    white-space: normal; /* Allow text to wrap */
+    word-wrap: break-word; /* Prevent long text from overflowing */
+}
+
+/* Media Queries for Responsive Design */
+
+/* Larger Screens (Desktop/Laptop) */
+@media (min-width: 1024px) {
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr); /* Display Skills in 2 columns */
+    }
+
+    .skills-item {
+        height: 320px; /* Slightly taller on larger screens */
+        margin: 25px; /* More space between items on larger screens */
+    }
+
+    .card-front, .card-back {
+        font-size: 1.15em; /* Slightly larger font on larger screens */
+    }
+}
+
+/* Medium Screens (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr); /* Display Skills in 2 columns on tablet */
+    }
+
+    .skills-item {
+        height: 280px; /* Slightly smaller height for tablets */
+        margin: 15px;
+        font-size: 0.9em;
+    }
+
+    .card-front, .card-back {
+        font-size: 1.1em; /* Keep font size smaller for better readability */
+    }
+}
+
+/* Small Screens (Phones) */
+@media (max-width: 767px) {
+    .skills-list {
+        grid-template-columns: 1fr; /* Stack skills in one column on mobile */
+    }
+
+    .skills-item {
+        height: 250px; /* Smaller height on mobile screens */
+        margin: 15px;
+        padding: 10px; /* Reduce padding for mobile screens */
+    }
+
+    .card-front, .card-back {
+        font-size: 1em; /* Smaller font size for mobile */
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-item a {
+        font-size: 0.9em; /* Smaller font size on mobile screens */
+    }
+}

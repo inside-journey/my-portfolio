@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio Website</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/content-flip.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Zen+Antique&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+
+    </head>
+
+
+    <body>
+
+        <header id="main-header">
+            <div id="language-selector">
+                <button id="lang-en" aria-label="Select Language: English" title="Select English as the site's language">English</button>
+                <button id="lang-ja" aria-label="Select Language: Japanese" title="Select Japanese as the site's language">日本語</button>
+                <button id="lang-es" aria-label="Select Language: Español" title="Select Spanish as the site's language">Español</button>
+            </div>
+
+            <h1 class="title" id="name-sentence">Ayoze Kitajima</h1>
+                <p class="greeting" id="greeting-phrase" title="Thanks for stopping by :)">
+                    Hello, Visitor - Welcome to my page!
+                </p>
+        </header>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#main-header" id="nav-home">Home</a></li>
+                <li class="nav-item"><a href="#skills" id="nav-skills">Skills</a></li>
+                <li class="nav-item"><a href="#projects" id="nav-projects">Projects</a></li>
+                <li class="nav-item"><a href="#about" id="nav-about">About me</a></li>
+                <li class="nav-item"><a href="#main-footer" id="nav-contact">Contact</a></li>
+                <li class="nav-item"><button id="dark-mode-toggle" aria-label="Toggle Dark Mode" title="Toggle to display">Dark<br>Mode</button></li>
+            </ul>
+        </nav>
+
+        <section id="skills">
+            <h2 id="skills-title">Skills</h2>
+                <ul class="skills-list">
+                    <li class="skills-item" title="Click to see what is behind!">
+                        <div class="card-inner">
+                            <div class="card-front">
+
+                                &lt;&nbsp;<strong>HTML</strong>&nbsp;&gt;
+                            </div>
+                            <div class="card-back">
+                                <img src="/assets/certificates/html-cert.jpg" alt="image of HTML certificate">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills-item" title="Click and it will show you something!">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                * {&nbsp;<strong>CSS</strong>&nbsp;}
+                            </div>
+                            <div class="card-back">
+                                <img src="/assets/certificates/css-cert.jpg" alt="image of CSS certificate">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills-item" title="No code - it will just flip :)">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                const get<strong>JavaScript</strong>&nbsp;= [ " " ];
+                            </div>
+                            <div class="card-back">
+                                <img src="/assets/certificates/js-cert.jpg" alt="image of JavaScript certificate">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="skills-item" title="Would you like to know a bit more?">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <em>else if { <strong>otherPaths</strong> }</em>
+                            </div>
+                            <div class="card-back">
+                                <img src="/assets/images/interests-pic.jpeg" alt="image of currently learning skills, future skills, and priorities.">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+        </section>
+
+        <section id="projects">
+            <h2 id="projects-title">Projects</h2>
+                <ul class="projects-list">
+                    <li class="projects-item"><a href="./projects/project1.html">Sleep Debt</a></li>
+                    <li class="projects-item"><a href="./projects/project2.html">[...]</a></li>
+                </ul>
+        </section>
+
+        <section id="about">
+            <h2 id="about-title">About me</h2>
+                <div class="about-content" id="about-description">
+                    <p class="about-paragraph">A passionate and dedicated web developer with a focus on Front-End development. With a strong foundation in building intuitive and user-friendly websites, I am constantly expanding my skills and exploring new technologies to create clean, functional, and aesthetically pleasing web experiences. Sooner than later, I will transition to <strong>Full-Stack Development.</strong></p>
+                    <br>
+                    <p class="about-paragraph">My <strong>goal</strong> is to contribute to innovative projects while continuing to grow as a developer. Among these projects, I aim to develop further my skills to possess a broader set of unique skills that can create safe and adaptable websites.</p>
+                </div>
+                <div class="about-image">
+                    <img src="/assets/images/profile-picture.png" alt="Image of the developer" id="about-image">
+                </div>
+
+        </section>
+
+        <footer id="main-footer">
+            <h2 id="connect-section">Connect with me</h2>
+                <a href="https://linkedin.com/in/ayoze-k-680428266" target="_blank" class="social-link" aria-label="Visit Ayoze's LinkedIn profile" title="Connect with me"><i class="fab fa-linkedin"></i></a>
+                <a href="https://medium.com/@mylilwind" target="_blank" class="social-link" aria-label="Visit Ayoze's Medium profile" title="Read my thoughts"><i class="fab fa-medium"></i></a>
+                <a href="https://github.com/inside-journey" target="_blank" class="social-link" aria-label="Visit Ayoze's Github profile" title="See my GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:tildes-01.swarm@icloud.com" target="_blank" class="social-link" aria-label="Send Ayoze a direct email" title="Send me an email"><i class="fas fa-envelope"></i></a>
+        </footer>
+            <section>
+                <p id="footer-phrase">© 2024 | Crafted with 🩵 | Styled with CSS | Powered by JavaScript | Optimized for Everyone 🌏</p>
+            </section>
+
+
+        <script src="./js/script.js"></script>
+        <script src="js/dk-mode.js"></script>
+        <script src="js/content-flip.js"></script>
+
+    </body>
+
+</html>
